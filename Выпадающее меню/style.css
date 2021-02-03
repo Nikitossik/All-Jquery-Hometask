@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+#wrap {
+  width: 100%;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.header:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("images/header_back_day.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.header.active:before {
+  background: url("images/header_back_night.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#nav_btn {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  width: 40px;
+  height: 30px;
+  transition: 0.5s;
+  z-index: 9999;
+}
+
+#nav_btn span {
+  height: 3px;
+  position: absolute;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  height: 3px;
+  margin-top: 13px;
+  transition: 0.5s;
+  transform-origin: 50% 50%;
+}
+
+#nav_btn:before,
+#nav_btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  height: 3px;
+  transform-origin: 0 0;
+  transition: 0.5s;
+}
+
+#nav_btn:before {
+  top: 0;
+}
+
+#nav_btn:after {
+  bottom: 0;
+}
+
+#nav_btn.clicked span {
+  transform: scaleX(0);
+}
+
+#nav_btn.clicked:before {
+  transform: rotate(40deg);
+  width: 42px;
+}
+
+#nav_btn.clicked:after {
+  transform: rotate(-40deg);
+  width: 42px;
+}
+
+.header .menu {
+  width: 30vw;
+  height: 100%;
+  background: #000;
+  z-index: 9999;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(-30vw);
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.menu.active {
+  transform: translateX(0);
+}
+
+.menu button.dropdown_btn, .menu a {
+  width: 100%;
+  padding: 15px 0;
+  background: none;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  display: block;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s linear;
+}
+
+.menu button.dropdown_btn i{
+    margin-left:5px;
+}
+
+.menu .drop_block{
+    width: 100%;
+}
+
+button.dropdown_btn.opened, .menu a:hover{
+    background: #9EC3F6;
+    color: #000;
+}
+
+.menu .drop_block a.sub_item{
+    padding: 10px;
+    text-align: center;
+    background: #304562;
+    color:#fff;
+}
+
+.menu .drop_block a.sub_item:hover{
+    background: #171F29;
+    transition: 0.3s linear;
+}

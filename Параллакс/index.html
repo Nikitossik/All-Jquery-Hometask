@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Паралакс</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <section id="universe" class='scene'>
+            <div class='layer intro'>
+                <div class="content">
+                    <h1>Welcome to the trip</h1>
+                    <p>scroll down to see more....</p>
+                </div>
+            </div>
+            <div class='layer asteroids'>
+                <div class="elem asteroid type1 fir" data-side='left' data-width='150px' data-x='-150px' data-y='-150px'
+                    data-speed-x='0.3' data-speed-y='0.4' data-rotate='-0.5' data-scale='0.1'>
+                    <img src="images/ast1.png" alt="">
+                </div>
+                <div class="elem asteroid type1 sec" data-side='right' data-width='150px' data-x='-150px' data-y='100%'
+                    data-speed-x='0.4' data-speed-y='-0.2' data-rotate='0.3' data-scale='-0.02'>
+                    <img src="images/ast1.png" alt="">
+                </div>
+                <div class="elem asteroid type2 fir" data-side='left' data-width='200px' data-x='-200px' data-y='50%'
+                    data-speed-x='0.6' data-speed-y='-0.1' data-rotate='0.03' data-scale='0.05'>
+                    <img src="images/ast2.png" alt="">
+                </div>
+                <div class="elem asteroid type2 sec" data-side='right' data-width='200px' data-x='-200px' data-y='50%'
+                    data-speed-x='0.3' data-speed-y='0.05' data-rotate='0.03' data-scale='-0.05'>
+                    <img src="images/ast2.png" alt="">
+                </div>
+                <div class="elem asteroid type3 fir" data-side='left' data-width='150px' data-x='-150px' data-y='100%'
+                    data-speed-x='0.5' data-speed-y='-0.5' data-rotate='-1' data-scale='-0.05'>
+                    <img src="images/ast3.png" alt="">
+                </div>
+                <div class="elem asteroid type3 sec" data-side='right' data-width='150px' data-x='-150px' data-y='100px'
+                    data-speed-x='0.5' data-speed-y='0.3' data-rotate='1' data-scale='-0.05'>
+                    <img src="images/ast3.png" alt="">
+                </div>
+            </div>
+            <div class="layer astro" data-speed='0.8'> 
+
+                <div class="elem space-station" data-width='400px' data-scale="0.4" data-speed-y='0.02' data-y='30%'>
+                    <img src="images/space-station.png" alt="">
+
+                    <div class="elem astr astr1" data-width='20px' data-scale='0.2' data-speed-x='-0.4' data-speed-y='0.5' data-x='30%' data-y='20%'
+                        data-rotate='-0.3'><img src="images/astronaut1.png" alt=""></div>
+                    <div class="elem astr astr2" data-width='20px' data-scale='0.2' data-speed-x='-0.2' data-speed-y='0.5' data-x='50%' data-y='40%'
+                        data-rotate='0.2'><img src="images/astronaut2.png" alt=""></div>
+                    <div class="elem astr astr3" data-width='20px' data-scale='0.2' data-speed-x='0.01' data-speed-y='0.5' data-x='80%' data-y='10%'
+                        data-rotate='-0.1'><img src="images/astronaut3.png" alt=""></div>
+                </div>
+            </div>
+    </section>
+    <section id="atmosphere" class="scene">
+        <div class="layer earth outro">
+            <div class="content">
+                <h1>Coming soon...</h1>
+            </div>
+        </div>
+    </section>
+    </div>
+</body>
+
+</html>

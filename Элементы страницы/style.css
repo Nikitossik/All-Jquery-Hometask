@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border:0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body{
+    height: 100%;
+}
+
+#wrap{
+    width: 100%;
+    position: relative;
+}
+
+.navigation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    z-index: 9999;
+}
+
+.navigation *{
+    z-index: 9999;
+}
+
+.navigation ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.landing_info{
+    min-width: 500px;
+}
+
+.user_btns{
+    min-width: 200px;
+}
+
+/* .navigation ul li{
+    margin-left: 30px;
+}
+
+.navigation .user_btns li{
+
+} */
+
+.navigation ul li a{
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    line-height: 60px;
+    min-width: 120px;
+    font-size: 16px;
+}
+
+.header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .content{
+    max-width: 900px;
+}
+
+.header .content h1{
+    color:#fff;
+    font-size: 3em;
+}
+
+.header::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(images/header_back.png);
+    background-size:cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+    filter:brightness(0.5);
+    z-index: -1;
+    transition: 0.5s ease;
+}
+
+.header.animated::before{
+    background: url(images/header_back_day_auto_x1.jpg);
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* filter:brightness(1); */
+}
+
+#change_btn{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    border-radius :21% 79% 19% 81% / 65% 25% 75% 35% ;
+    text-align: center;
+    color:#fff;
+    background:#461FBC;
+    min-width: 120px;
+    padding: 20px;
+    user-select: none;
+    font-size: 18px;
+    transition: 1s;
+}
+
+#change_btn.animated{
+    transform: translateX(-400px);
+    background: #5F0E3C;
+}
